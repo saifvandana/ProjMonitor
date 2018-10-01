@@ -1,0 +1,114 @@
+﻿@model ProjectMonitor.Models.OligoNucleotide
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>OligoNucleotide</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.SiparisKodu)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.SiparisKodu)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.SiparisTarihi)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.SiparisTarihi)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.AlinmaTarihi)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.AlinmaTarihi)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.HedefGenTur)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.HedefGenTur)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.OligoNucleotideType)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.OligoNucleotideType)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.BesIsaretleme)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.BesIsaretleme)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.NucleotideSequence)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.NucleotideSequence)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.UcIsaretleme)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.UcIsaretleme)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.NucleotideLength)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.NucleotideLength)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Tm)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Tm)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.GcPercent)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.GcPercent)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.SelfComp)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.SelfComp)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Self3Comp)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Self3Comp)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.HedefBolgeUzunlugu)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.HedefBolgeUzunlugu)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.PrimerDimertur)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.PrimerDimertur)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.KaynakTasarlananSistem)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.KaynakTasarlananSistem)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.Id">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

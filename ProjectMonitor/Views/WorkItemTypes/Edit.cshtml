@@ -1,0 +1,59 @@
+﻿@model ProjectMonitor.Models.WorkItemType
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h2>Edit</h2>
+
+<h4>WorkItemType</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Id" />
+            <div class="form-group">
+                <label asp-for="AlimTarihi" class="control-label"></label>
+                <input asp-for="AlimTarihi" class="form-control" />
+                <span asp-validation-for="AlimTarihi" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="AlinanKisi" class="control-label"></label>
+                <input asp-for="AlinanKisi" class="form-control" />
+                <span asp-validation-for="AlinanKisi" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TeslimAlan" class="control-label"></label>
+                <input asp-for="TeslimAlan" class="form-control" />
+                <span asp-validation-for="TeslimAlan" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Marka" class="control-label"></label>
+                <input asp-for="Marka" class="form-control" />
+                <span asp-validation-for="Marka" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TeslimAlinanAdet" class="control-label"></label>
+                <input asp-for="TeslimAlinanAdet" class="form-control" />
+                <span asp-validation-for="TeslimAlinanAdet" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="WorkItemsId" class="control-label"></label>
+                <select asp-for="WorkItemsId" class="form-control" asp-items="ViewBag.WorkItemsId"></select>
+                <span asp-validation-for="WorkItemsId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-default" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

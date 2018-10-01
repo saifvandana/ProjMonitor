@@ -1,0 +1,165 @@
+﻿@model ProjectMonitor.Models.Projects
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>Projects</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.UhtNumber)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.UhtNumber)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.SdfNumber)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.SdfNumber)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.ProjeBaslangicTarihi)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.ProjeBaslangicTarihi)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.ProjeBitisTarihi)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.ProjeBitisTarihi)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.KullanilacakMesai)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.KullanilacakMesai)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.BeklenenNumuneAdedi)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.BeklenenNumuneAdedi)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.ProjeSorumlusu)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.ProjeSorumlusu)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.ProjeTuru)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.ProjeTuru)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.IlgiliMusteri)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.IlgiliMusteri)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.IlgiliMusteriTelNo)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.IlgiliMusteriTelNo)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.IlgiliMusteriEmail)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.IlgiliMusteriEmail)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.IlgiliMusteriTemsilcisi)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.IlgiliMusteriTemsilcisi)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.ProjeServerLink)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.ProjeServerLink)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.ProjeAciklama)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.ProjeAciklama)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.ProjeSonDurum)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.ProjeSonDurum)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.ProjectReport)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.ProjectReport)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.ProjectResearchPlan)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.ProjectResearchPlan.Id)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.WorkItemMonitor)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.WorkItemMonitor.Id)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.OligonucleotideInfo)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.OligonucleotideInfo.Id)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.SampleExtraction)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.SampleExtraction.Id)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.PcrProcess)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.PcrProcess.Id)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.ProjectState)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.ProjectState.Id)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.SampleProvider)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.SampleProvider.Id)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Results)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Results.Id)
+        </dd>
+    </dl>
+    
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="Id" />
+        <input type="submit" value="Delete" class="btn btn-default" /> |
+        <a asp-action="Index">Back to List</a>
+    </form>
+</div>

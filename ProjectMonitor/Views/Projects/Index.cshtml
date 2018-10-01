@@ -1,0 +1,173 @@
+﻿@model IEnumerable<ProjectMonitor.Models.Projects>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.UhtNumber)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SdfNumber)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ProjeBaslangicTarihi)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ProjeBitisTarihi)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.KullanilacakMesai)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.BeklenenNumuneAdedi)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ProjeSorumlusu)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ProjeTuru)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.IlgiliMusteri)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.IlgiliMusteriTelNo)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.IlgiliMusteriEmail)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.IlgiliMusteriTemsilcisi)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ProjeServerLink)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ProjeAciklama)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ProjeSonDurum)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ProjectReport)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ProjectResearchPlan)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.WorkItemMonitor)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.OligonucleotideInfo)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SampleExtraction)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PcrProcess)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ProjectState)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SampleProvider)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Results)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.UhtNumber)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SdfNumber)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ProjeBaslangicTarihi)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ProjeBitisTarihi)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.KullanilacakMesai)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.BeklenenNumuneAdedi)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ProjeSorumlusu)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ProjeTuru)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IlgiliMusteri)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IlgiliMusteriTelNo)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IlgiliMusteriEmail)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IlgiliMusteriTemsilcisi)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ProjeServerLink)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ProjeAciklama)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ProjeSonDurum)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ProjectReport)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ProjectResearchPlan.Id)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.WorkItemMonitor.Id)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.OligonucleotideInfo.Id)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SampleExtraction.Id)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PcrProcess.Id)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ProjectState.Id)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SampleProvider.Id)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Results.Id)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

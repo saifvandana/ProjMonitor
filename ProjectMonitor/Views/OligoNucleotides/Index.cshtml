@@ -1,0 +1,125 @@
+﻿@model IEnumerable<ProjectMonitor.Models.OligoNucleotide>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.SiparisKodu)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SiparisTarihi)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.AlinmaTarihi)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.HedefGenTur)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.OligoNucleotideType)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.BesIsaretleme)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NucleotideSequence)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.UcIsaretleme)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NucleotideLength)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Tm)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.GcPercent)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SelfComp)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Self3Comp)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.HedefBolgeUzunlugu)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PrimerDimertur)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.KaynakTasarlananSistem)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.SiparisKodu)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SiparisTarihi)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.AlinmaTarihi)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.HedefGenTur)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.OligoNucleotideType)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.BesIsaretleme)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NucleotideSequence)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.UcIsaretleme)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NucleotideLength)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Tm)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.GcPercent)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SelfComp)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Self3Comp)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.HedefBolgeUzunlugu)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PrimerDimertur)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.KaynakTasarlananSistem)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

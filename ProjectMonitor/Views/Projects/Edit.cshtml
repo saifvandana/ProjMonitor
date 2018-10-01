@@ -1,0 +1,149 @@
+﻿@model ProjectMonitor.Models.Projects
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h2>Edit</h2>
+
+<h4>Projects</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Id" />
+            <div class="form-group">
+                <label asp-for="UhtNumber" class="control-label"></label>
+                <input asp-for="UhtNumber" class="form-control" />
+                <span asp-validation-for="UhtNumber" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="SdfNumber" class="control-label"></label>
+                <input asp-for="SdfNumber" class="form-control" />
+                <span asp-validation-for="SdfNumber" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ProjeBaslangicTarihi" class="control-label"></label>
+                <input asp-for="ProjeBaslangicTarihi" class="form-control" />
+                <span asp-validation-for="ProjeBaslangicTarihi" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ProjeBitisTarihi" class="control-label"></label>
+                <input asp-for="ProjeBitisTarihi" class="form-control" />
+                <span asp-validation-for="ProjeBitisTarihi" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="KullanilacakMesai" class="control-label"></label>
+                <input asp-for="KullanilacakMesai" class="form-control" />
+                <span asp-validation-for="KullanilacakMesai" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="BeklenenNumuneAdedi" class="control-label"></label>
+                <input asp-for="BeklenenNumuneAdedi" class="form-control" />
+                <span asp-validation-for="BeklenenNumuneAdedi" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ProjeSorumlusu" class="control-label"></label>
+                <input asp-for="ProjeSorumlusu" class="form-control" />
+                <span asp-validation-for="ProjeSorumlusu" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ProjeTuru" class="control-label"></label>
+                <input asp-for="ProjeTuru" class="form-control" />
+                <span asp-validation-for="ProjeTuru" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="IlgiliMusteri" class="control-label"></label>
+                <input asp-for="IlgiliMusteri" class="form-control" />
+                <span asp-validation-for="IlgiliMusteri" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="IlgiliMusteriTelNo" class="control-label"></label>
+                <input asp-for="IlgiliMusteriTelNo" class="form-control" />
+                <span asp-validation-for="IlgiliMusteriTelNo" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="IlgiliMusteriEmail" class="control-label"></label>
+                <input asp-for="IlgiliMusteriEmail" class="form-control" />
+                <span asp-validation-for="IlgiliMusteriEmail" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="IlgiliMusteriTemsilcisi" class="control-label"></label>
+                <input asp-for="IlgiliMusteriTemsilcisi" class="form-control" />
+                <span asp-validation-for="IlgiliMusteriTemsilcisi" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ProjeServerLink" class="control-label"></label>
+                <input asp-for="ProjeServerLink" class="form-control" />
+                <span asp-validation-for="ProjeServerLink" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ProjeAciklama" class="control-label"></label>
+                <input asp-for="ProjeAciklama" class="form-control" />
+                <span asp-validation-for="ProjeAciklama" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ProjeSonDurum" class="control-label"></label>
+                <input asp-for="ProjeSonDurum" class="form-control" />
+                <span asp-validation-for="ProjeSonDurum" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ProjectResearchPlanId" class="control-label"></label>
+                <select asp-for="ProjectResearchPlanId" class="form-control" asp-items="ViewBag.ProjectResearchPlanId"></select>
+                <span asp-validation-for="ProjectResearchPlanId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="WorkItemMonitorId" class="control-label"></label>
+                <select asp-for="WorkItemMonitorId" class="form-control" asp-items="ViewBag.WorkItemMonitorId"></select>
+                <span asp-validation-for="WorkItemMonitorId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="OligonucleotideInfoId" class="control-label"></label>
+                <select asp-for="OligonucleotideInfoId" class="form-control" asp-items="ViewBag.OligonucleotideInfoId"></select>
+                <span asp-validation-for="OligonucleotideInfoId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="SampleExtractionId" class="control-label"></label>
+                <select asp-for="SampleExtractionId" class="form-control" asp-items="ViewBag.SampleExtractionId"></select>
+                <span asp-validation-for="SampleExtractionId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="PcrProcessId" class="control-label"></label>
+                <select asp-for="PcrProcessId" class="form-control" asp-items="ViewBag.PcrProcessId"></select>
+                <span asp-validation-for="PcrProcessId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ResultsId" class="control-label"></label>
+                <select asp-for="ResultsId" class="form-control" asp-items="ViewBag.ResultsId"></select>
+                <span asp-validation-for="ResultsId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ProjectStateId" class="control-label"></label>
+                <select asp-for="ProjectStateId" class="form-control" asp-items="ViewBag.ProjectStateId"></select>
+                <span asp-validation-for="ProjectStateId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="SampleProviderId" class="control-label"></label>
+                <select asp-for="SampleProviderId" class="form-control" asp-items="ViewBag.SampleProviderId"></select>
+                <span asp-validation-for="SampleProviderId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ProjectReport" class="control-label"></label>
+                <input asp-for="ProjectReport" class="form-control" />
+                <span asp-validation-for="ProjectReport" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-default" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

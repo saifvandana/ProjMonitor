@@ -1,0 +1,107 @@
+﻿@model IEnumerable<ProjectMonitor.Models.SampleExtraction>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.NumuneAlisTarihi)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TeslimAlinan)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TeslimAlan)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NumuneIsim)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NumuneKodu)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NumuneTuru)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NumuneKurum)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DiagenNukleikAsidKodu)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.EkstraksiyonTarihi)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.YapanKisi)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Yontem)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.KullanilanKit)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Aciklama)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.NumuneAlisTarihi)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TeslimAlinan)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TeslimAlan)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NumuneIsim)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NumuneKodu)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NumuneTuru)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NumuneKurum)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DiagenNukleikAsidKodu)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.EkstraksiyonTarihi)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.YapanKisi)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Yontem)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.KullanilanKit)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Aciklama)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

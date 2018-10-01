@@ -1,0 +1,54 @@
+﻿@model ProjectMonitor.Models.WorkItemType
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>WorkItemType</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.AlimTarihi)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.AlimTarihi)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.AlinanKisi)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.AlinanKisi)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TeslimAlan)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TeslimAlan)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Marka)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Marka)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TeslimAlinanAdet)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TeslimAlinanAdet)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.WorkItems)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.WorkItems.Id)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.Id">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

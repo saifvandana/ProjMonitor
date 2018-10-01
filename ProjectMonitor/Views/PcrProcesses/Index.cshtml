@@ -1,0 +1,137 @@
+﻿@model IEnumerable<ProjectMonitor.Models.PcrProcess>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Cihaz)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.OperatorAdi)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Tarih)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.KayitAdi)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CalisanGen)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Results)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DH20)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CalismaAmaci)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Yorum)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ResultSlip)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MixA)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MixB)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Enzyme)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Denaturation)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Pcr1)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Pcr2)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Cooling)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NucleicAcid)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Cihaz)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.OperatorAdi)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Tarih)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.KayitAdi)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CalisanGen)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Results)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DH20)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CalismaAmaci)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Yorum)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ResultSlip.Id)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MixA.Id)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MixB.Id)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Enzyme.Id)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Denaturation.Id)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Pcr1.Id)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Pcr2.Id)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Cooling.Id)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NucleicAcid.Id)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

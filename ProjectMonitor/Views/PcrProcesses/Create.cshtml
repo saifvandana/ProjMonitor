@@ -1,0 +1,109 @@
+﻿@model ProjectMonitor.Models.PcrProcess
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h2>Create</h2>
+
+<h4>PcrProcess</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Cihaz" class="control-label"></label>
+                <input asp-for="Cihaz" class="form-control" />
+                <span asp-validation-for="Cihaz" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="OperatorAdi" class="control-label"></label>
+                <input asp-for="OperatorAdi" class="form-control" />
+                <span asp-validation-for="OperatorAdi" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Tarih" class="control-label"></label>
+                <input asp-for="Tarih" class="form-control" />
+                <span asp-validation-for="Tarih" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="KayitAdi" class="control-label"></label>
+                <input asp-for="KayitAdi" class="form-control" />
+                <span asp-validation-for="KayitAdi" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CalisanGen" class="control-label"></label>
+                <input asp-for="CalisanGen" class="form-control" />
+                <span asp-validation-for="CalisanGen" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ResultSlipId" class="control-label"></label>
+                <select asp-for="ResultSlipId" class ="form-control" asp-items="ViewBag.ResultSlipId"></select>
+            </div>
+            <div class="form-group">
+                <label asp-for="Results" class="control-label"></label>
+                <input asp-for="Results" class="form-control" />
+                <span asp-validation-for="Results" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="MixAId" class="control-label"></label>
+                <select asp-for="MixAId" class ="form-control" asp-items="ViewBag.MixAId"></select>
+            </div>
+            <div class="form-group">
+                <label asp-for="MixBId" class="control-label"></label>
+                <select asp-for="MixBId" class ="form-control" asp-items="ViewBag.MixBId"></select>
+            </div>
+            <div class="form-group">
+                <label asp-for="EnzymeId" class="control-label"></label>
+                <select asp-for="EnzymeId" class ="form-control" asp-items="ViewBag.EnzymeId"></select>
+            </div>
+            <div class="form-group">
+                <label asp-for="DH20" class="control-label"></label>
+                <input asp-for="DH20" class="form-control" />
+                <span asp-validation-for="DH20" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="DenaturationId" class="control-label"></label>
+                <select asp-for="DenaturationId" class ="form-control" asp-items="ViewBag.DenaturationId"></select>
+            </div>
+            <div class="form-group">
+                <label asp-for="Pcr1Id" class="control-label"></label>
+                <select asp-for="Pcr1Id" class ="form-control" asp-items="ViewBag.Pcr1Id"></select>
+            </div>
+            <div class="form-group">
+                <label asp-for="Pcr2Id" class="control-label"></label>
+                <select asp-for="Pcr2Id" class ="form-control" asp-items="ViewBag.Pcr2Id"></select>
+            </div>
+            <div class="form-group">
+                <label asp-for="CoolingId" class="control-label"></label>
+                <select asp-for="CoolingId" class ="form-control" asp-items="ViewBag.CoolingId"></select>
+            </div>
+            <div class="form-group">
+                <label asp-for="NucleicAcidId" class="control-label"></label>
+                <select asp-for="NucleicAcidId" class ="form-control" asp-items="ViewBag.NucleicAcidId"></select>
+            </div>
+            <div class="form-group">
+                <label asp-for="CalismaAmaci" class="control-label"></label>
+                <input asp-for="CalismaAmaci" class="form-control" />
+                <span asp-validation-for="CalismaAmaci" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Yorum" class="control-label"></label>
+                <input asp-for="Yorum" class="form-control" />
+                <span asp-validation-for="Yorum" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-default" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

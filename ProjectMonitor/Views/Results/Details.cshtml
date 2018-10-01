@@ -1,0 +1,102 @@
+﻿@model ProjectMonitor.Models.Results
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Results</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.NanogramDegeri)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.NanogramDegeri)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TeslimAlan)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TeslimAlan)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TespitDegeri1)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TespitDegeri1)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TespitDegeri2)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TespitDegeri2)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TespitDegeri3)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TespitDegeri3)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TespitDegeri4)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TespitDegeri4)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TespitDegeri5)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TespitDegeri5)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TespitDegeri6)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TespitDegeri6)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TespitDegeri7)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TespitDegeri7)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TespitDegeri8)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TespitDegeri8)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TespitDegeri9)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TespitDegeri9)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.GorselLinki)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.GorselLinki)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Onay)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Onay)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Sample)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Sample.Id)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.Id">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

@@ -1,0 +1,94 @@
+﻿@model ProjectMonitor.Models.SampleExtraction
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h2>Edit</h2>
+
+<h4>SampleExtraction</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Id" />
+            <div class="form-group">
+                <label asp-for="NumuneAlisTarihi" class="control-label"></label>
+                <input asp-for="NumuneAlisTarihi" class="form-control" />
+                <span asp-validation-for="NumuneAlisTarihi" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TeslimAlinan" class="control-label"></label>
+                <input asp-for="TeslimAlinan" class="form-control" />
+                <span asp-validation-for="TeslimAlinan" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TeslimAlan" class="control-label"></label>
+                <input asp-for="TeslimAlan" class="form-control" />
+                <span asp-validation-for="TeslimAlan" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="NumuneIsim" class="control-label"></label>
+                <input asp-for="NumuneIsim" class="form-control" />
+                <span asp-validation-for="NumuneIsim" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="NumuneKodu" class="control-label"></label>
+                <input asp-for="NumuneKodu" class="form-control" />
+                <span asp-validation-for="NumuneKodu" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="NumuneTuru" class="control-label"></label>
+                <input asp-for="NumuneTuru" class="form-control" />
+                <span asp-validation-for="NumuneTuru" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="NumuneKurum" class="control-label"></label>
+                <input asp-for="NumuneKurum" class="form-control" />
+                <span asp-validation-for="NumuneKurum" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="DiagenNukleikAsidKodu" class="control-label"></label>
+                <input asp-for="DiagenNukleikAsidKodu" class="form-control" />
+                <span asp-validation-for="DiagenNukleikAsidKodu" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="EkstraksiyonTarihi" class="control-label"></label>
+                <input asp-for="EkstraksiyonTarihi" class="form-control" />
+                <span asp-validation-for="EkstraksiyonTarihi" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="YapanKisi" class="control-label"></label>
+                <input asp-for="YapanKisi" class="form-control" />
+                <span asp-validation-for="YapanKisi" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Yontem" class="control-label"></label>
+                <input asp-for="Yontem" class="form-control" />
+                <span asp-validation-for="Yontem" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="KullanilanKit" class="control-label"></label>
+                <input asp-for="KullanilanKit" class="form-control" />
+                <span asp-validation-for="KullanilanKit" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Aciklama" class="control-label"></label>
+                <input asp-for="Aciklama" class="form-control" />
+                <span asp-validation-for="Aciklama" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-default" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

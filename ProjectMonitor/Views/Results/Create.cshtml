@@ -1,0 +1,117 @@
+﻿@model ProjectMonitor.Models.Results
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h2>Create</h2>
+
+<h4>Results</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="SampleExtractionId" class="control-label"></label>
+                <select asp-for="SampleExtractionId" class ="form-control" asp-items="ViewBag.SampleExtractionId"></select>
+            </div>
+            <div class="form-group">
+                <label asp-for="NanogramDegeri" class="control-label"></label>
+                <input asp-for="NanogramDegeri" class="form-control" />
+                <span asp-validation-for="NanogramDegeri" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TeslimAlan" class="control-label"></label>
+                <input asp-for="TeslimAlan" class="form-control" />
+                <span asp-validation-for="TeslimAlan" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <div class="checkbox">
+                    <label>
+                        <input asp-for="TespitDegeri1" /> @Html.DisplayNameFor(model => model.TespitDegeri1)
+                    </label>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="checkbox">
+                    <label>
+                        <input asp-for="TespitDegeri2" /> @Html.DisplayNameFor(model => model.TespitDegeri2)
+                    </label>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="checkbox">
+                    <label>
+                        <input asp-for="TespitDegeri3" /> @Html.DisplayNameFor(model => model.TespitDegeri3)
+                    </label>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="checkbox">
+                    <label>
+                        <input asp-for="TespitDegeri4" /> @Html.DisplayNameFor(model => model.TespitDegeri4)
+                    </label>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="checkbox">
+                    <label>
+                        <input asp-for="TespitDegeri5" /> @Html.DisplayNameFor(model => model.TespitDegeri5)
+                    </label>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="checkbox">
+                    <label>
+                        <input asp-for="TespitDegeri6" /> @Html.DisplayNameFor(model => model.TespitDegeri6)
+                    </label>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="checkbox">
+                    <label>
+                        <input asp-for="TespitDegeri7" /> @Html.DisplayNameFor(model => model.TespitDegeri7)
+                    </label>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="checkbox">
+                    <label>
+                        <input asp-for="TespitDegeri8" /> @Html.DisplayNameFor(model => model.TespitDegeri8)
+                    </label>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="checkbox">
+                    <label>
+                        <input asp-for="TespitDegeri9" /> @Html.DisplayNameFor(model => model.TespitDegeri9)
+                    </label>
+                </div>
+            </div>
+            <div class="form-group">
+                <label asp-for="GorselLinki" class="control-label"></label>
+                <input asp-for="GorselLinki" class="form-control" />
+                <span asp-validation-for="GorselLinki" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <div class="checkbox">
+                    <label>
+                        <input asp-for="Onay" /> @Html.DisplayNameFor(model => model.Onay)
+                    </label>
+                </div>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-default" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

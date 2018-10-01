@@ -1,0 +1,109 @@
+﻿@model ProjectMonitor.Models.OligoNucleotide
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h2>Edit</h2>
+
+<h4>OligoNucleotide</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Id" />
+            <div class="form-group">
+                <label asp-for="SiparisKodu" class="control-label"></label>
+                <input asp-for="SiparisKodu" class="form-control" />
+                <span asp-validation-for="SiparisKodu" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="SiparisTarihi" class="control-label"></label>
+                <input asp-for="SiparisTarihi" class="form-control" />
+                <span asp-validation-for="SiparisTarihi" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="AlinmaTarihi" class="control-label"></label>
+                <input asp-for="AlinmaTarihi" class="form-control" />
+                <span asp-validation-for="AlinmaTarihi" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="HedefGenTur" class="control-label"></label>
+                <input asp-for="HedefGenTur" class="form-control" />
+                <span asp-validation-for="HedefGenTur" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="OligoNucleotideType" class="control-label"></label>
+                <input asp-for="OligoNucleotideType" class="form-control" />
+                <span asp-validation-for="OligoNucleotideType" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="BesIsaretleme" class="control-label"></label>
+                <input asp-for="BesIsaretleme" class="form-control" />
+                <span asp-validation-for="BesIsaretleme" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="NucleotideSequence" class="control-label"></label>
+                <input asp-for="NucleotideSequence" class="form-control" />
+                <span asp-validation-for="NucleotideSequence" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="UcIsaretleme" class="control-label"></label>
+                <input asp-for="UcIsaretleme" class="form-control" />
+                <span asp-validation-for="UcIsaretleme" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="NucleotideLength" class="control-label"></label>
+                <input asp-for="NucleotideLength" class="form-control" />
+                <span asp-validation-for="NucleotideLength" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Tm" class="control-label"></label>
+                <input asp-for="Tm" class="form-control" />
+                <span asp-validation-for="Tm" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="GcPercent" class="control-label"></label>
+                <input asp-for="GcPercent" class="form-control" />
+                <span asp-validation-for="GcPercent" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="SelfComp" class="control-label"></label>
+                <input asp-for="SelfComp" class="form-control" />
+                <span asp-validation-for="SelfComp" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Self3Comp" class="control-label"></label>
+                <input asp-for="Self3Comp" class="form-control" />
+                <span asp-validation-for="Self3Comp" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="HedefBolgeUzunlugu" class="control-label"></label>
+                <input asp-for="HedefBolgeUzunlugu" class="form-control" />
+                <span asp-validation-for="HedefBolgeUzunlugu" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="PrimerDimertur" class="control-label"></label>
+                <input asp-for="PrimerDimertur" class="form-control" />
+                <span asp-validation-for="PrimerDimertur" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="KaynakTasarlananSistem" class="control-label"></label>
+                <input asp-for="KaynakTasarlananSistem" class="form-control" />
+                <span asp-validation-for="KaynakTasarlananSistem" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-default" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

@@ -1,0 +1,36 @@
+﻿@model ProjectMonitor.Models.NucleicAcid
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>NucleicAcid</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Kod)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Kod)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Hacim)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Hacim)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Sonuc)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Sonuc)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.Id">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

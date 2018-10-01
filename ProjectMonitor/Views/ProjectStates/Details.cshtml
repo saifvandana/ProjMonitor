@@ -1,0 +1,72 @@
+﻿@model ProjectMonitor.Models.ProjectState
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>ProjectState</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.ProjectRoles)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.ProjectRoles)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.YardimciKisiler)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.YardimciKisiler)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Status)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Status)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Tamamlanan)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Tamamlanan)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.BaslangicTarihi)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.BaslangicTarihi)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.BitisTarihi)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.BitisTarihi)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.KalanSure)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.KalanSure)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.CalismaSure)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.CalismaSure)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.SorumluKisi)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.SorumluKisi.Id)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.Id">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

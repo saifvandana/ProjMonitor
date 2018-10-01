@@ -1,0 +1,113 @@
+﻿@model IEnumerable<ProjectMonitor.Models.Results>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.NanogramDegeri)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TeslimAlan)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TespitDegeri1)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TespitDegeri2)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TespitDegeri3)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TespitDegeri4)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TespitDegeri5)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TespitDegeri6)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TespitDegeri7)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TespitDegeri8)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TespitDegeri9)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.GorselLinki)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Onay)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Sample)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.NanogramDegeri)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TeslimAlan)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TespitDegeri1)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TespitDegeri2)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TespitDegeri3)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TespitDegeri4)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TespitDegeri5)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TespitDegeri6)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TespitDegeri7)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TespitDegeri8)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TespitDegeri9)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.GorselLinki)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Onay)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Sample.Id)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

@@ -1,0 +1,30 @@
+﻿@model ProjectMonitor.Models.OligonucleotideInfo
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>OligonucleotideInfo</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.OligoNucleotide)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.OligoNucleotide.Id)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.OligoNucleotideMixB)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.OligoNucleotideMixB.Id)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.Id">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

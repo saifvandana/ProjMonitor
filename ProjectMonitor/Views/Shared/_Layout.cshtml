@@ -1,0 +1,131 @@
+﻿
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - ProjectMonitor</title>
+
+    <environment include="Development">
+        <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap-spacelab.css" />
+        <link rel="stylesheet" href="~/css/site.css" />
+    </environment>
+    <environment exclude="Development">
+        <link rel="stylesheet" href="https://ajax.aspnetcdn.com/ajax/bootstrap/3.3.7/css/bootstrap.min.css"
+              asp-fallback-href="~/lib/bootstrap/dist/css/bootstrap.min.css"
+              asp-fallback-test-class="sr-only" asp-fallback-test-property="position" asp-fallback-test-value="absolute" />
+        <link rel="stylesheet" href="~/css/site.min.css" asp-append-version="true" />
+    </environment>
+</head>
+<body>
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a asp-area="" asp-controller="Home" asp-action="Index" class="navbar-brand">ProjectMonitor</a>
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li class="dropdown">
+                        <a asp-controller="ProjectResearchPlans" asp-action="Index"
+                           class="dropdown-toggle" data-toggle="dropdown">Projects</a>
+                        <ul class="dropdown-menu">
+                            <li><a asp-area="" asp-controller="Projects" asp-action="Index">Projects</a></li>
+                            <li><a asp-area="" asp-controller="ProjectStates" asp-action="Index">Project Plan</a></li>
+                            <li><a asp-area="" asp-controller="SampleProviders" asp-action="Index"> Kurum Listesi</a></li>
+                            <li><a asp-area="" asp-controller="Employees" asp-action="Index">Employees</a></li>
+                            <li><a asp-area="" asp-controller="EmployeeRoles" asp-action="Index">Employee Roles</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a asp-controller="ProjectResearchPlans" asp-action="Index"
+                           class="dropdown-toggle" data-toggle="dropdown">Research</a>
+                        <ul class="dropdown-menu">
+                            <li><a asp-area="" asp-controller="ProjectResearchPlans" asp-action="Index">Project Researches</a></li>
+                            <li><a asp-area="" asp-controller="ReferenceArticles" asp-action="Index">Reference Articles</a></li>
+                            <li><a asp-area="" asp-controller="ProjectSteps" asp-action="Index">Steps</a></li>
+                            <li><a asp-area="" asp-controller="StepsResearches" asp-action="Index">Steps Research</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a asp-controller="OligonucleotideInfoes" asp-action="Index"
+                           class="dropdown-toggle" data-toggle="dropdown">OligoNucleotide</a>
+                        <ul class="dropdown-menu">
+                            <li><a asp-area="" asp-controller="OligonucleotideInfoes" asp-action="Index">Oligonucleotides Info</a></li>
+                            <li><a asp-area="" asp-controller="OligoNucleotides" asp-action="Index">Oligonucleotides</a></li>
+                            <li><a asp-area="" asp-controller="OligoNucleotideMixBs" asp-action="Index">MixB</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a asp-controller="WorkItemMonitors" asp-action="Index"
+                           class="dropdown-toggle" data-toggle="dropdown">Work Items</a>
+                        <ul class="dropdown-menu">
+                            <li><a asp-area="" asp-controller="WorkItemMonitors" asp-action="Index">Work Items</a></li>
+                            <li><a asp-area="" asp-controller="WorkItemTypes" asp-action="Index">Work Item Type</a></li>
+                            <li><a asp-area="" asp-controller="WorkItems" asp-action="Index">Items list</a></li>
+                        </ul>
+                    </li>
+                    <li><a asp-area="" asp-controller="SampleExtractions" asp-action="Index">Sample Extraction</a></li>
+                    <li class="dropdown">
+                        <a asp-controller="PcrProcesses" asp-action="Index"
+                           class="dropdown-toggle" data-toggle="dropdown">PCR Process</a>
+                        <ul class="dropdown-menu">
+                            <li><a asp-area="" asp-controller="PcrProcesses" asp-action="Index">Pcr Process</a></li>
+                            <li><a asp-area="" asp-controller="ResultSlips" asp-action="Index">Result Slip</a></li>
+                            <li><a asp-area="" asp-controller="MixAs" asp-action="Index">MixA</a></li>
+                            <li><a asp-area="" asp-controller="MixBs" asp-action="Index">MixBs</a></li>
+                            <li><a asp-area="" asp-controller="Enzymes" asp-action="Index">Enzymes</a></li>
+                            <li><a asp-area="" asp-controller="Denaturations" asp-action="Index">Denaturation</a></li>
+                            <li><a asp-area="" asp-controller="Pcr1" asp-action="Index">PCR1</a></li>
+                            <li><a asp-area="" asp-controller="Pcr2" asp-action="Index">PCR2</a></li>
+                            <li><a asp-area="" asp-controller="Coolings" asp-action="Index">Coolings</a></li>
+                            <li><a asp-area="" asp-controller="NucleicAcids" asp-action="Index">DNA</a></li>
+                        </ul>
+                    </li>
+                    <li><a asp-area="" asp-controller="Results" asp-action="Index">Results</a></li>
+                </ul>
+                
+            </div>
+        </div>
+
+    </nav>
+
+    <partial name="_CookieConsentPartial" />
+
+    <div class="container body-content">
+        @RenderBody()
+        <hr />
+        <footer>
+            <p>&copy; 2018 - ProjectMonitor</p>
+        </footer>
+    </div>
+
+    <environment include="Development">
+        <script src="~/lib/jquery/dist/jquery.js"></script>
+        <script src="~/lib/bootstrap/dist/js/bootstrap.js"></script>
+        <script src="~/js/site.js" asp-append-version="true"></script>
+    </environment>
+    <environment exclude="Development">
+        <script src="https://ajax.aspnetcdn.com/ajax/jquery/jquery-3.3.1.min.js"
+                asp-fallback-src="~/lib/jquery/dist/jquery.min.js"
+                asp-fallback-test="window.jQuery"
+                crossorigin="anonymous"
+                integrity="sha384-tsQFqpEReu7ZLhBV2VZlAu7zcOV+rXbYlF2cqB8txI/8aZajjp4Bqd+V6D5IgvKT">
+        </script>
+        <script src="https://ajax.aspnetcdn.com/ajax/bootstrap/3.3.7/bootstrap.min.js"
+                asp-fallback-src="~/lib/bootstrap/dist/js/bootstrap.min.js"
+                asp-fallback-test="window.jQuery && window.jQuery.fn && window.jQuery.fn.modal"
+                crossorigin="anonymous"
+                integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa">
+        </script>
+        <script src="~/js/site.min.js" asp-append-version="true"></script>
+    </environment>
+
+    @RenderSection("Scripts", required: false)
+</body>
+</html>

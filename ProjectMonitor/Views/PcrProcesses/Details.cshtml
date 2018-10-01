@@ -1,0 +1,126 @@
+﻿@model ProjectMonitor.Models.PcrProcess
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>PcrProcess</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Cihaz)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Cihaz)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.OperatorAdi)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.OperatorAdi)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Tarih)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Tarih)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.KayitAdi)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.KayitAdi)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.CalisanGen)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.CalisanGen)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Results)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Results)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.DH20)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.DH20)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.CalismaAmaci)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.CalismaAmaci)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Yorum)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Yorum)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.ResultSlip)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.ResultSlip.Id)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.MixA)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.MixA.Id)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.MixB)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.MixB.Id)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Enzyme)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Enzyme.Id)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Denaturation)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Denaturation.Id)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Pcr1)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Pcr1.Id)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Pcr2)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Pcr2.Id)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Cooling)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Cooling.Id)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.NucleicAcid)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.NucleicAcid.Id)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.Id">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>
